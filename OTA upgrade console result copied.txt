@@ -1,0 +1,361 @@
+C:\Users\krith>cd "C:\Users\krith\Documents\esp32-ota-update-system"
+
+C:\Users\krith\Documents\esp32-ota-update-system>pip install pyserial
+Requirement already satisfied: pyserial in C:\Users\krith\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages (3.5)
+
+[notice] A new release of pip is available: 26.1.2 -> 26.2.1
+[notice] To update, run: C:\Users\krith\AppData\Local\Python\pythoncore-3.14-64\python.exe -m pip install --upgrade pip
+
+C:\Users\krith\Documents\esp32-ota-update-system>python ota_server.py
+
+═══════════════════════════════════════════════════════
+  ESP32 OTA Update Server
+  Author: Krithiga Ramesh | KrithiCircuitLab
+  Date: 2026-09-01 09:24:09
+═══════════════════════════════════════════════════════
+
+💻 Your laptop IP: 192.168.0.6
+🌐 Server URL:     http://192.168.0.6:8070
+📁 Firmware file:  firmware.bin
+📡 Serial port:    COM3
+
+✅ firmware.bin found
+   Size: 897,888 bytes (876 KB)
+
+📋 STEPS TO RUN OTA UPDATE:
+───────────────────────────────────────────────────────
+1. Make sure ESP32 is plugged in via USB
+2. Make sure ESP32 has v1.0.0 flashed
+3. Make sure firmware.bin (v2.0.0) is here
+4. This server is now starting...
+───────────────────────────────────────────────────────
+
+
+✅ HTTP server started on port 8070
+✅ Connected to ESP32 on COM3
+
+───────────────────────────────────────────────────────
+  Waiting for ESP32 output...
+  (Press Ctrl+C to stop)
+───────────────────────────────────────────────────────
+
+[09:24:10] ets Jul 29 2019 12:21:46
+[09:24:10] rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+[09:24:10] configsip: 0, SPIWP:0xee
+[09:24:10] clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+[09:24:10] mode:DIO, clock div:2
+[09:24:10] load:0x3fff0030,len:6280
+[09:24:10] load:0x40078000,len:15864
+[09:24:10] load:0x40080400,len:3920
+[09:24:10] entry 0x40080644
+[09:24:10] I (27) boot: ESP-IDF v5.5.4 2nd stage bootloader
+[09:24:10] I (27) boot: compile time Aug 31 2026 17:44:19
+[09:24:10] I (28) boot: Multicore bootloader
+[09:24:10] I (29) boot: chip revision: v3.1
+[09:24:10] I (32) boot.esp32: SPI Speed      : 40MHz
+[09:24:10] I (35) boot.esp32: SPI Mode       : DIO
+[09:24:10] I (39) boot.esp32: SPI Flash Size : 4MB
+[09:24:10] I (42) boot: Enabling RNG early entropy source...
+[09:24:10] I (47) boot: Partition Table:
+[09:24:10] I (49) boot: ## Label            Usage          Type ST Offset   Length
+[09:24:10] I (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+[09:24:10] I (62) boot:  1 otadata          OTA data         01 00 0000f000 00002000
+[09:24:10] I (69) boot:  2 app0             OTA app          00 10 00020000 001c0000
+[09:24:10] I (75) boot:  3 app1             OTA app          00 11 001e0000 001c0000
+[09:24:10] I (82) boot: End of partition table
+[09:24:10] I (85) esp_image: segment 0: paddr=00020020 vaddr=3f400020 size=1f6a4h (128676) map
+[09:24:10] I (137) esp_image: segment 1: paddr=0003f6cc vaddr=3ffb0000 size=0094ch (  2380) load
+[09:24:10] I (138) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=9f840h (653376) map
+[09:24:10] I (364) esp_image: segment 3: paddr=000df868 vaddr=3ffb094c size=03a0ch ( 14860) load
+[09:24:10] I (369) esp_image: segment 4: paddr=000e327c vaddr=40080000 size=18088h ( 98440) load
+[09:24:10] I (408) esp_image: segment 5: paddr=000fb30c vaddr=50000000 size=00020h (    32) load
+[09:24:10] I (420) boot: Loaded app from partition at offset 0x20000
+[09:24:10] I (420) boot: Disabling RNG early entropy source...
+[09:24:10] I (431) cpu_start: Multicore app
+[09:24:10] I (439) cpu_start: GPIO 3 and 1 are used as console UART I/O pins
+[09:24:10] I (439) cpu_start: Pro cpu start user code
+[09:24:10] I (439) cpu_start: cpu freq: 160000000 Hz
+[09:24:10] I (441) app_init: Application information:
+[09:24:10] I (445) app_init: Project name:     ota_system
+[09:24:10] I (449) app_init: App version:      1
+[09:24:10] I (452) app_init: Compile time:     Sep  1 2026 09:16:41
+[09:24:10] I (457) app_init: ELF file SHA256:  1c2b490eb...
+[09:24:10] I (462) app_init: ESP-IDF:          v5.5.4
+[09:24:10] I (466) efuse_init: Min chip rev:     v0.0
+[09:24:10] I (469) efuse_init: Max chip rev:     v3.99
+[09:24:10] I (473) efuse_init: Chip rev:         v3.1
+[09:24:10] I (478) heap_init: Initializing. RAM available for dynamic allocation:
+[09:24:10] I (484) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM
+[09:24:10] I (489) heap_init: At 3FFB8C68 len 00027398 (156 KiB): DRAM
+[09:24:10] I (494) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM
+[09:24:10] I (499) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+[09:24:10] I (505) heap_init: At 40098088 len 00007F78 (31 KiB): IRAM
+[09:24:10] I (512) spi_flash: detected chip: generic
+[09:24:10] I (514) spi_flash: flash io: dio
+[09:24:10] I (518) main_task: Started on CPU0
+[09:24:10] I (528) main_task: Calling app_main()
+[09:24:10] I (528) OTA: ╔══════════════════════════════╗
+[09:24:10] I (528) OTA: ║  ESP32 OTA Update System     ║
+
+🔵 ESP32 BOOTED
+
+[09:24:10] I (528) OTA: ║  Version: 1.0.0               ║
+[09:24:10] I (538) OTA: ║  KrithiCircuitLab            ║
+[09:24:10] I (538) OTA: ╚══════════════════════════════╝
+[09:24:10] I (578) OTA: Connecting to: StarHub_2DD4
+[09:24:10] I (588) wifi:wifi driver task: 3ffc0cac, prio:23, stack:6656, core=0
+[09:24:10] I (598) wifi:wifi firmware version: 0947e8b
+[09:24:11] I (598) wifi:wifi certification version: v7.0
+[09:24:11] I (598) wifi:config NVS flash: enabled
+[09:24:11] I (598) wifi:config nano formatting: disabled
+[09:24:11] I (598) wifi:Init data frame dynamic rx buffer num: 32
+[09:24:11] I (608) wifi:Init static rx mgmt buffer num: 5
+[09:24:11] I (608) wifi:Init management short buffer num: 32
+[09:24:11] I (618) wifi:Init dynamic tx buffer num: 32
+[09:24:11] I (618) wifi:Init static rx buffer size: 1600
+[09:24:11] I (628) wifi:Init static rx buffer num: 10
+[09:24:11] I (628) wifi:Init dynamic rx buffer num: 32
+[09:24:11] I (638) wifi_init: rx ba win: 6
+[09:24:11] I (638) wifi_init: accept mbox: 6
+[09:24:11] I (638) wifi_init: tcpip mbox: 32
+[09:24:11] I (638) wifi_init: udp mbox: 6
+[09:24:11] I (648) wifi_init: tcp mbox: 6
+[09:24:11] I (648) wifi_init: tcp tx win: 5760
+[09:24:11] I (648) wifi_init: tcp rx win: 5760
+[09:24:11] I (648) wifi_init: tcp mss: 1440
+[09:24:11] I (658) wifi_init: WiFi IRAM OP enabled
+[09:24:11] I (658) wifi_init: WiFi RX IRAM OP enabled
+[09:24:11] W (668) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2
+[09:24:11] I (668) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06
+[09:24:11] I (758) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)
+[09:24:11] I (828) wifi:mode : sta (b0:cb:d8:c1:9a:10)
+[09:24:11] I (828) wifi:enable tsf
+[09:24:11] I (838) OTA: WiFi connecting...
+[09:24:11] I (848) wifi:new:<10,0>, old:<1,0>, ap:<255,255>, sta:<10,0>, prof:1, snd_ch_cfg:0x0
+[09:24:11] I (848) wifi:state: init -> auth (0xb0)
+[09:24:12] I (1908) wifi:state: auth -> assoc (0x0)
+[09:24:12] I (1918) wifi:Association refused temporarily time 1000, comeback time 1100 (TUs)
+[09:24:13] I (3048) wifi:state: assoc -> auth (0xb0)
+[09:24:14] I (4108) wifi:state: auth -> assoc (0x0)
+[09:24:14] I (4118) wifi:state: assoc -> run (0x10)
+[09:24:14] I (4148) wifi:connected with StarHub_2DD4, aid = 1, channel 10, BW20, bssid = e0:d3:62:80:2d:d4
+[09:24:14] I (4148) wifi:security: WPA3-SAE H2E, phy: bgn, rssi: -49, cipher(pairwise:0x3, group:0x3), pmf:1
+[09:24:14] I (4158) wifi:pm start, type: 1
+[09:24:14] I (4158) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+[09:24:14] I (4178) wifi:<ba-add>idx:0 (ifx:0, e0:d3:62:80:2d:d4), tid:0, ssn:0, winSize:64
+[09:24:14] I (4238) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[09:24:19] I (8678) esp_netif_handlers: sta ip: 192.168.0.8, mask: 255.255.255.0, gw: 192.168.0.1
+[09:24:19] I (8678) OTA: WiFi connected! IP: 192.168.0.8
+
+🟢 WIFI CONNECTED
+
+[09:24:19] I (8678) OTA: Starting OTA in 3 seconds...
+
+🚀 OTA UPDATE STARTED
+
+[09:24:22] I (11678) OTA: ═══════════════════════════════
+[09:24:22] I (11678) OTA: Starting OTA update process
+
+🚀 OTA UPDATE STARTED
+
+[09:24:22] I (11678) OTA: Current version: 1.0.0
+[09:24:22] I (11678) OTA: Downloading from: http://192.168.0.6:8070/firmware.bin
+[09:24:22] I (11688) OTA: ═══════════════════════════════
+[09:24:22] I (11698) OTA: Running from partition: app0
+[09:24:22] I (11698) main_task: Returned from app_main()
+[09:24:23] I (13498) OTA: Downloading firmware...
+
+⬇️  DOWNLOADING FIRMWARE...
+   Please wait...
+
+[09:24:23] W (13498) esp_https_ota: Continuing with insecure option because CONFIG_ESP_HTTPS_OTA_ALLOW_HTTP is set.
+[09:24:23] I (13578) wifi:<ba-add>idx:1 (ifx:0, e0:d3:62:80:2d:d4), tid:6, ssn:2, winSize:64
+
+📦 ESP32 requesting firmware...
+   Serving: firmware.bin
+[09:24:24] I (13778) esp_https_ota: Starting OTA...
+
+🚀 OTA UPDATE STARTED
+
+[09:24:24] I (13778) esp_https_ota: Writing to <app1> partition at offset 0x1e0000
+[09:24:40] I (30328) esp_image: segment 0: paddr=001e0020 vaddr=3f400020 size=1f6a4h (128676) map
+[09:24:40] I (30368) esp_image: segment 1: paddr=001ff6cc vaddr=3ffb0000 size=0094ch (  2380)
+[09:24:40] I (30378) esp_image: segment 2: paddr=00200020 vaddr=400d0020 size=9f84ch (653388) map
+[09:24:40] I (30588) esp_image: segment 3: paddr=0029f874 vaddr=3ffb094c size=03a0ch ( 14860)
+[09:24:40] I (30588) esp_image: segment 4: paddr=002a3288 vaddr=40080000 size=18088h ( 98440)
+[09:24:41] I (30618) esp_image: segment 5: paddr=002bb318 vaddr=50000000 size=00020h (    32)
+[09:24:41] I (30628) esp_image: segment 0: paddr=001e0020 vaddr=3f400020 size=1f6a4h (128676) map
+[09:24:41] I (30678) esp_image: segment 1: paddr=001ff6cc vaddr=3ffb0000 size=0094ch (  2380)
+[09:24:41] I (30678) esp_image: segment 2: paddr=00200020 vaddr=400d0020 size=9f84ch (653388) map
+[09:24:41] I (30888) esp_image: segment 3: paddr=0029f874 vaddr=3ffb094c size=03a0ch ( 14860)
+[09:24:41] I (30898) esp_image: segment 4: paddr=002a3288 vaddr=40080000 size=18088h ( 98440)
+[09:24:41] I (30928) esp_image: segment 5: paddr=002bb318 vaddr=50000000 size=00020h (    32)
+[09:24:41] I (30988) OTA: ✅ OTA download SUCCESS
+
+✅ OTA DOWNLOAD COMPLETE!
+   Duration: 17.2s
+[09:24:41] I (30988) OTA: Rebooting into new firmware...
+
+🔄 REBOOTING INTO NEW FIRMWARE...
+   Waiting for v2.0.0...
+
+[09:24:45] I (34988) wifi:state: run -> init (0x0)
+[09:24:45] I (34998) wifi:pm stop, total sleep time: 12706931 us / 30834287 us
+[09:24:45] I (34998) wifi:<ba-del>idx:0, tid:0
+[09:24:45] I (34998) wifi:<ba-del>idx:1, tid:6
+[09:24:45] I (34998) wifi:new:<10,0>, old:<10,0>, ap:<255,255>, sta:<10,0>, prof:1, snd_ch_cfg:0x0
+[09:24:45] W (35008) OTA: Retry 1/5...
+[09:24:45] I (35058) wifi:flush txq
+[09:24:45] I (35058) wifi:stop sw txq
+[09:24:45] I (35058) wifi:lmac stop hw txq
+[09:24:45] ets Jul 29 2019 12:21:46
+[09:24:45] rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+[09:24:45] configsip: 0, SPIWP:0xee
+[09:24:45] clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+[09:24:45] mode:DIO, clock div:2
+[09:24:45] load:0x3fff0030,len:6280
+[09:24:45] load:0x40078000,len:15864
+[09:24:45] load:0x40080400,len:3920
+[09:24:45] entry 0x40080644
+[09:24:45] I (27) boot: ESP-IDF v5.5.4 2nd stage bootloader
+[09:24:45] I (27) boot: compile time Aug 31 2026 17:44:19
+[09:24:45] I (27) boot: Multicore bootloader
+[09:24:45] I (29) boot: chip revision: v3.1
+[09:24:45] I (31) boot.esp32: SPI Speed      : 40MHz
+[09:24:45] I (35) boot.esp32: SPI Mode       : DIO
+[09:24:45] I (39) boot.esp32: SPI Flash Size : 4MB
+[09:24:45] I (42) boot: Enabling RNG early entropy source...
+[09:24:45] I (47) boot: Partition Table:
+[09:24:45] I (49) boot: ## Label            Usage          Type ST Offset   Length
+[09:24:45] I (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+[09:24:45] I (62) boot:  1 otadata          OTA data         01 00 0000f000 00002000
+[09:24:45] I (69) boot:  2 app0             OTA app          00 10 00020000 001c0000
+[09:24:45] I (75) boot:  3 app1             OTA app          00 11 001e0000 001c0000
+[09:24:45] I (82) boot: End of partition table
+[09:24:45] I (85) esp_image: segment 0: paddr=001e0020 vaddr=3f400020 size=1f6a4h (128676) map
+[09:24:45] I (137) esp_image: segment 1: paddr=001ff6cc vaddr=3ffb0000 size=0094ch (  2380) load
+[09:24:45] I (138) esp_image: segment 2: paddr=00200020 vaddr=400d0020 size=9f84ch (653388) map
+[09:24:45] I (364) esp_image: segment 3: paddr=0029f874 vaddr=3ffb094c size=03a0ch ( 14860) load
+[09:24:45] I (369) esp_image: segment 4: paddr=002a3288 vaddr=40080000 size=18088h ( 98440) load
+[09:24:45] I (408) esp_image: segment 5: paddr=002bb318 vaddr=50000000 size=00020h (    32) load
+[09:24:45] I (420) boot: Loaded app from partition at offset 0x1e0000
+[09:24:45] I (420) boot: Disabling RNG early entropy source...
+[09:24:45] I (431) cpu_start: Multicore app
+[09:24:45] I (439) cpu_start: GPIO 3 and 1 are used as console UART I/O pins
+[09:24:45] I (439) cpu_start: Pro cpu start user code
+[09:24:45] I (439) cpu_start: cpu freq: 160000000 Hz
+[09:24:45] I (441) app_init: Application information:
+[09:24:45] I (445) app_init: Project name:     ota_system
+[09:24:45] I (449) app_init: App version:      1
+[09:24:45] I (452) app_init: Compile time:     Aug 31 2026 17:43:49
+[09:24:45] I (457) app_init: ELF file SHA256:  6ac9cb0aa...
+[09:24:45] I (462) app_init: ESP-IDF:          v5.5.4
+[09:24:45] I (465) efuse_init: Min chip rev:     v0.0
+[09:24:45] I (469) efuse_init: Max chip rev:     v3.99
+[09:24:45] I (473) efuse_init: Chip rev:         v3.1
+[09:24:45] I (477) heap_init: Initializing. RAM available for dynamic allocation:
+[09:24:45] I (484) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM
+[09:24:45] I (488) heap_init: At 3FFB8C68 len 00027398 (156 KiB): DRAM
+[09:24:45] I (494) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM
+[09:24:45] I (499) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+[09:24:45] I (505) heap_init: At 40098088 len 00007F78 (31 KiB): IRAM
+[09:24:45] I (511) spi_flash: detected chip: generic
+[09:24:45] I (514) spi_flash: flash io: dio
+[09:24:45] I (518) main_task: Started on CPU0
+[09:24:45] I (528) main_task: Calling app_main()
+[09:24:46] I (528) OTA: ╔══════════════════════════════╗
+[09:24:46] I (528) OTA: ║  ESP32 OTA Update System     ║
+
+🔵 ESP32 BOOTED
+
+[09:24:46] I (528) OTA: ║  Version: 2.0.0               ║
+
+🎉 v2.0.0 IS RUNNING!
+
+═══════════════════════════════════════════════════════
+  OTA UPDATE REPORT
+═══════════════════════════════════════════════════════
+  Result:        SUCCESS ✅
+  From version:  1.0.0
+  To version:    2.0.0
+  Duration:      17.2 seconds
+  Events logged: 10
+  Report saved:  ota_report.json
+═══════════════════════════════════════════════════════
+
+[09:24:46] I (538) OTA: ║  KrithiCircuitLab            ║
+[09:24:46] I (538) OTA: ╚══════════════════════════════╝
+[09:24:46] I (578) OTA: Connecting to: StarHub_2DD4
+[09:24:46] I (588) wifi:wifi driver task: 3ffc0d30, prio:23, stack:6656, core=0
+[09:24:46] I (598) wifi:wifi firmware version: 0947e8b
+[09:24:46] I (598) wifi:wifi certification version: v7.0
+[09:24:46] I (598) wifi:config NVS flash: enabled
+[09:24:46] I (598) wifi:config nano formatting: disabled
+[09:24:46] I (598) wifi:Init data frame dynamic rx buffer num: 32
+[09:24:46] I (608) wifi:Init static rx mgmt buffer num: 5
+[09:24:46] I (608) wifi:Init management short buffer num: 32
+[09:24:46] I (618) wifi:Init dynamic tx buffer num: 32
+[09:24:46] I (618) wifi:Init static rx buffer size: 1600
+[09:24:46] I (628) wifi:Init static rx buffer num: 10
+[09:24:46] I (628) wifi:Init dynamic rx buffer num: 32
+[09:24:46] I (638) wifi_init: rx ba win: 6
+[09:24:46] I (638) wifi_init: accept mbox: 6
+[09:24:46] I (638) wifi_init: tcpip mbox: 32
+[09:24:46] I (638) wifi_init: udp mbox: 6
+[09:24:46] I (648) wifi_init: tcp mbox: 6
+[09:24:46] I (648) wifi_init: tcp tx win: 5760
+[09:24:46] I (648) wifi_init: tcp rx win: 5760
+[09:24:46] I (648) wifi_init: tcp mss: 1440
+[09:24:46] I (658) wifi_init: WiFi IRAM OP enabled
+[09:24:46] I (658) wifi_init: WiFi RX IRAM OP enabled
+[09:24:46] W (668) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2
+[09:24:46] I (668) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06
+[09:24:46] I (758) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)
+[09:24:46] I (778) wifi:mode : sta (b0:cb:d8:c1:9a:10)
+[09:24:46] I (778) wifi:enable tsf
+[09:24:46] I (778) OTA: WiFi connecting...
+[09:24:46] I (828) wifi:new:<10,0>, old:<1,0>, ap:<255,255>, sta:<10,0>, prof:1, snd_ch_cfg:0x0
+[09:24:46] I (828) wifi:state: init -> auth (0xb0)
+[09:24:47] I (1878) wifi:state: auth -> assoc (0x0)
+[09:24:47] I (1888) wifi:state: assoc -> run (0x10)
+[09:24:47] I (1908) wifi:connected with StarHub_2DD4, aid = 1, channel 10, BW20, bssid = e0:d3:62:80:2d:d4
+[09:24:47] I (1908) wifi:security: WPA3-SAE H2E, phy: bgn, rssi: -34, cipher(pairwise:0x3, group:0x3), pmf:1
+[09:24:47] I (1918) wifi:pm start, type: 1
+[09:24:47] I (1918) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+[09:24:47] I (1938) wifi:<ba-add>idx:0 (ifx:0, e0:d3:62:80:2d:d4), tid:0, ssn:0, winSize:64
+[09:24:47] I (2048) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[09:24:51] I (6448) esp_netif_handlers: sta ip: 192.168.0.8, mask: 255.255.255.0, gw: 192.168.0.1
+[09:24:51] I (6448) OTA: WiFi connected! IP: 192.168.0.8
+
+🟢 WIFI CONNECTED
+
+[09:24:51] I (6448) OTA: Starting OTA in 3 seconds...
+
+🚀 OTA UPDATE STARTED
+
+[09:24:52] I (7078) wifi:<ba-add>idx:1 (ifx:0, e0:d3:62:80:2d:d4), tid:6, ssn:2, winSize:64
+[09:24:54] I (9448) OTA: ═══════════════════════════════
+[09:24:54] I (9448) OTA: Starting OTA update process
+
+🚀 OTA UPDATE STARTED
+
+[09:24:54] I (9448) OTA: Current version: 2.0.0
+
+🎉 v2.0.0 IS RUNNING!
+
+═══════════════════════════════════════════════════════
+  OTA UPDATE REPORT
+═══════════════════════════════════════════════════════
+  Result:        SUCCESS ✅
+  From version:  1.0.0
+  To version:    2.0.0
+  Duration:      17.2 seconds
+  Events logged: 14
+  Report saved:  ota_report.json
+═══════════════════════════════════════════════════════
+
+[09:24:54] I (9448) OTA: Downloading from: http://192.168.0.6:8070/firmware.bin
+[09:24:54] I (9458) OTA: ═══════════════════════════════
+[09:24:54] I (9468) OTA: Running from partition: app1
+[09:24:54] I (9468) main_task: Returned from app_main()
+[09:24:56] I (11268) OTA: Downloading firmware...

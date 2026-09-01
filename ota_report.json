@@ -1,0 +1,89 @@
+{
+  "timestamp": "2026-09-01T09:24:56.743692",
+  "result": "FAILED",
+  "duration_sec": 17.2,
+  "firmware_from": "1.0.0",
+  "firmware_to": "2.0.0",
+  "events": [
+    {
+      "time": "09:24:10",
+      "event": "BOOT",
+      "details": ""
+    },
+    {
+      "time": "09:24:19",
+      "event": "WIFI_OK",
+      "details": "I (8678) OTA: WiFi connected! IP: 192.168.0.8"
+    },
+    {
+      "time": "09:24:19",
+      "event": "OTA_START",
+      "details": ""
+    },
+    {
+      "time": "09:24:22",
+      "event": "OTA_START",
+      "details": ""
+    },
+    {
+      "time": "09:24:23",
+      "event": "DOWNLOADING",
+      "details": ""
+    },
+    {
+      "time": "09:24:24",
+      "event": "OTA_START",
+      "details": ""
+    },
+    {
+      "time": "09:24:41",
+      "event": "OTA_SUCCESS",
+      "details": "Duration: 17.2s"
+    },
+    {
+      "time": "09:24:41",
+      "event": "REBOOT",
+      "details": ""
+    },
+    {
+      "time": "09:24:46",
+      "event": "BOOT",
+      "details": ""
+    },
+    {
+      "time": "09:24:46",
+      "event": "NEW_VERSION",
+      "details": "v2.0.0 confirmed running"
+    },
+    {
+      "time": "09:24:51",
+      "event": "WIFI_OK",
+      "details": "I (6448) OTA: WiFi connected! IP: 192.168.0.8"
+    },
+    {
+      "time": "09:24:51",
+      "event": "OTA_START",
+      "details": ""
+    },
+    {
+      "time": "09:24:54",
+      "event": "OTA_START",
+      "details": ""
+    },
+    {
+      "time": "09:24:54",
+      "event": "NEW_VERSION",
+      "details": "v2.0.0 confirmed running"
+    },
+    {
+      "time": "09:24:56",
+      "event": "DOWNLOADING",
+      "details": ""
+    },
+    {
+      "time": "09:24:56",
+      "event": "OTA_FAILED",
+      "details": "E (11268) OTA: \u274c OTA FAILED: ESP_ERR_INVALID_ARG"
+    }
+  ]
+}
